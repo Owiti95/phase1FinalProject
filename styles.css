@@ -1,0 +1,264 @@
+/* Reset default padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF; /* White */
+    color: #333333; /* Dark Gray */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hamburger-menu {
+    display: none; /* Hide by default on larger screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-menu:focus {
+    outline: none;
+}
+
+.hamburger-menu__line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav ul li {
+    margin-right: 20px;
+}
+
+.header-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.header-nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.header-nav ul li a:hover {
+    color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu on smaller screens */
+    }
+
+    .header-nav {
+        display: none; /* Hide navigation links by default on smaller screens */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #f9f9f9;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .header-nav.open {
+        display: block; /* Show navigation links when menu is open */
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+    }
+
+    .header-nav ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+header {
+    background-color: #388E3C; /* Emerald Green */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+#about-us {
+    padding: 20px 0;
+    text-align: center;
+}
+
+section {
+    padding: 40px 0;
+}
+
+#products {
+    background-color: #C8E6C9; /* Light Green */
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+    overflow: auto;
+}
+.productItem input {
+    color: #333;
+}
+#order {
+    background-color: #388E3C;
+    background-image: "https://media.istockphoto.com/id/1154805099/photo/zero-waste-and-eco-friendly-shopping-with-vegetables-and-fruits-in-textile-and-paper-bags-top.webp?b=1&s=170667a&w=0&k=20&c=JMK98QcptIqLFsnBZwVAGHC6dZaPrjQaqKDfuVJ-joA=";
+    color: white;
+}
+
+#orderForm {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#orderForm .form-group {
+    margin-bottom: 20px;
+}
+
+#orderForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#orderForm input[type="text"],
+#orderForm input[type="tel"],
+#orderForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#orderForm button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#orderForm button:hover {
+    background-color: #388E3C; /* Darker Green */
+}
+
+footer {
+    background-color: #388E3C; /* Emerald Green */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-links {
+    margin: 0;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+#commentsDisplay{
+    border: solid green;
+    border-radius: 4px;
+    width: 100px;
+}
+
+
+#vegetablesContainer {
+    max-width: 1200px;
+    height: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    overflow-x: auto; /* Allow horizontal scroll if needed */
+    border: 1px solid rgb(13, 53, 13);
+}
