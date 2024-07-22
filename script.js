@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //fetch and display of vegetables
     fetchAndDisplayVegetables();
 
-    //Handles buy button clicks
+    // Handles buy button clicks
     vegetablesContainer.addEventListener('click', function(event) {
         if (event.target.classList.contains('buy-button')) {
             const productName = event.target.dataset.name;
@@ -60,11 +60,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Handle form submission
-    const orderForm = document.getElementById('order-form');
+    const orderForm = document.getElementById('orderForm');
     orderForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const formData = new FormData(order-form);
+        const formData = new FormData(orderForm);
         const order = {};
 
         formData.forEach((value, key) => {
