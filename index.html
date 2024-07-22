@@ -3,47 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nairobi green Grocer</title>
+    <title>Nairobi Green Grocer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <h1>Green Market</h1>
-                    <p>Fresh Vegetables Directly from Farmers</p>
-                </div>
-                <button class="hamburger-menu" aria-label="Menu">
-                    <span class="hamburger-menu__line"></span>
-                    <span class="hamburger-menu__line"></span>
-                    <span class="hamburger-menu__line"></span>
-                </button>
-                <nav class="header-nav">
-                    <ul>
-                        <li><a href="#about-us">About Us</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#order">Order</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <h1>Nairobi Organics</h1>
+            <p>Fresh Vegetables Directly from Farmers</p>
+            <nav>
+                <ul>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#order">Place Your Order</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-
-    <section id="about-us">
-        <div class="container">
-            <h3>About Us</h3>
-            <p>Nairobi organics is group of three farmers who came together with one mission: to provide Nairobi residents with fresh chemical-free farm produce.</p>
-            <p>There Organic farming methods meet local and International standards.</p>
-            <p>We specialise on: Spinach, kales, Onions, tomatoes, and eggs</p>
-        </div>
-    </section>
 
     <section id="products">
         <div class="container">
             <h2>Products</h2>
             <div id="vegetablesContainer" class="products-grid">
-                <!--vegetable images will be added here-->
+                <!-- Vegetables will be dynamically inserted here -->
             </div>
         </div>
     </section>
@@ -65,25 +46,18 @@
                     <input type="tel" id="phone" name="phone" required>
                 </div>
                 <div id="productsList" class="form-group">
-                    <!-- Selected products and quantities will be generated here -->
+                    <!-- Selected products and quantities will be dynamically inserted here -->
                 </div>
-                <button type="submit" id="btn">Place Order</button>
+                <button type="submit">Place Order</button>
             </form>
         </div>
     </section>
-    <section id="googleMaps">
-        <iframe src="https://maps.app.goo.gl/zmqnqTUswvnRGvAb6" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </section>
 
-<footer>
-    <div class="container">
-        <ul class="social-links">
-            <li><a href="">Facebook</a></li>
-            <li><a href="">Twitter</a></li>
-            <li><a href="">Instagram</a></li>
-        </ul>
-    </div>
-</footer>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Green Market. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
