@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const apiUrl = 'db.json';
+    const apiUrl = "https://nairobi-organics-phase-1.vercel.app/vegetables";
     const vegetablesContainer = document.getElementById('vegetablesContainer');
     const productsList = document.getElementById('productsList');
 
@@ -41,10 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    // Initial fetch and display of vegetables
+    //fetch and display of vegetables
     fetchAndDisplayVegetables();
 
-    // Handle buy button clicks
+    //Handles buy button clicks
     vegetablesContainer.addEventListener('click', function(event) {
         if (event.target.classList.contains('buy-button')) {
             const productName = event.target.dataset.name;
@@ -59,38 +59,84 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    let form = document.getElementById('0rder-form')
+
+form.addEventListener('submit', e =>  {
+
+    // prevent form for reloading
+    e.preventDefault()
+    console.log(e)
+    
+    // getting form inputs
+    let name = document.getElementById('name').value
+    let address = document.getElementById('address').value
+    let phone = document.getElementById('phone').value
+    let products = document.getElementById('productsList').value
+
+    // creating object from form input
+    const formData = {
+        name : name,
+        address : address,
+        phone: phone,
+        productsList: products
+    }
+    console.log(formData)
+    
+   
+    // sending data to the server using fetch api
+    fetch(apiUrl, {
+        method : "POST",
+        headers : {
+            "Content-Type" : "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(res => res.json())
+    // .then(photo => console.log(photo))
+
+    // Resetting form inputs
+    document.getElementById('name').value = ""
+    document.getElementById('address').value = ""
+    document.getElementById('phone').value = ""
+    document.getElementById('productsList').value = ""
+})
+    
+    
+    
+    
     // Handle form submission
-    const orderForm = document.getElementById('orderForm');
-    orderForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+    // const orderForm = document.getElementById('order-form');
+    // orderForm.addEventListener('submit', function(event) {
+    //     event.preventDefault();
 
-        const formData = new FormData(orderForm);
-        const order = {};
+    //     const formData = new FormData(orderForm);
+    //     const order = {};
 
-        formData.forEach((value, key) => {
-            order[key] = value;
-        });
+    //     formData.forEach((value, key) => {
+    //         order[key] = value;
+    //     });
 
-        // Sending data to the server using fetch API
-        fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(order)
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Order successfully submitted:', data);
+    //     // Sending data to the server using fetch API
+    //     fetch(apiUrl, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'Accept': 'application/json'
+    //         },
+    //         body: JSON.stringify(order)
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log('Order successfully submitted:', data);
 
-        })
-        .catch(error => {
-            console.error('Error submitting order:', error);
-        });
+    //     })
+    //     .catch(error => {
+    //         console.error('Error submitting order:', error);
+    //     });
 
 
-        orderForm.reset();
-    });
+    //     orderForm.reset();
+    // });
 });
 
