@@ -259,6 +259,6 @@ footer {
     height: 600px;
     margin: 20px auto;
     padding: 20px;
-    overflow-x: auto; /* Allow horizontal scroll if needed */
-    border: 1px solid rgb(13, 53, 13);
+    overflow-x: auto; /*scroll*/
+    border: 1px solid green;
 }
