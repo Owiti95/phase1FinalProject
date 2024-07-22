@@ -1,5 +1,5 @@
-# Shopping List
-This shopping list is developed with HTML,CSS and Javascript.It allows users to purchase items and delete the list also.
+# e-commerce site
+This e-commerce site is developed with HTML,CSS and Javascript.It allows users to view green groceries and place their order..
   
 
 ## Features
@@ -31,9 +31,9 @@ This shopping list is developed with HTML,CSS and Javascript.It allows users to 
 3. Open the `index.html` file on your web browser.
 
 ## Usage
-1. Add Items: Type the name of the item into the input field and click the "purchase" button. The item will be added to the list.
-2. Mark Items as Purchased: Click on the purchase cart to mark it as purchased the item will be visually updated .
-3. Clear List: Click the "Delete" button to remove all items from the list.
+1. use the nav bar to navigate the page.
+2. Click on buy button to add item to cart.
+3. navigate to the place order to order the selected items.
 
 
 ## Contributions
@@ -49,6 +49,6 @@ To enhance or contribute on the existing project, follow these steps:
 
 ##Live Link
 
-https://phase1-final-project-kappa.vercel.app/#about-us
+https://owiti95.github.io/phase1FinalProject/
 
 https://nairobi-organics-phase-1.vercel.app/vegetables
