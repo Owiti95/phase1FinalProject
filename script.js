@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     orderForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const formData = new FormData(orderForm);
+        const formData = new FormData(order-form);
         const order = {};
 
         formData.forEach((value, key) => {
