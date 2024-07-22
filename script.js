@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const apiUrl = "https://nairobi-organics-phase-1.vercel.app/vegetables";
+    const apiUrl = "db.json";
     const vegetablesContainer = document.getElementById('vegetablesContainer');
     const productsList = document.getElementById('productsList');
 
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //fetch and display of vegetables
     fetchAndDisplayVegetables();
 
-    // Handles buy button clicks
+    // Handle buy button clicks
     vegetablesContainer.addEventListener('click', function(event) {
         if (event.target.classList.contains('buy-button')) {
             const productName = event.target.dataset.name;
