@@ -72,22 +72,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Sending data to the server using fetch API
-        fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(order)
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Order successfully submitted:', data);
+        // fetch(apiUrl, {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'Accept': 'application/json'
+        //     },
+        //     body: JSON.stringify(order)
+        // })
+        // .then(response => response.json())
+        // .then(data => {
+        //     console.log('Order successfully submitted:', data);
 
-        })
-        .catch(error => {
-            console.error('Error submitting order:', error);
-        });
+        // })
+        // .catch(error => {
+        //     console.error('Error submitting order:', error);
+        // });
 
 
         orderForm.reset();
