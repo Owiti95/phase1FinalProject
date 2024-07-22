@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             console.log('Order successfully submitted:', data);
+            orderForm.reset();
 
         })
         .catch(error => {
@@ -90,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
 
-        orderForm.reset();
+        
     });
 });
 

@@ -1,6 +1,17 @@
 # e-commerce site
 This e-commerce site is developed with HTML,CSS and Javascript.It allows users to view green groceries and place their order..
   
+## How it works
+
+-The program uses html to structure the website.
+-css is used for styling and manipilating the position and appearance(color) of the elements.
+-Javascript has been used to add functionality to the website. Using DOM manipulation, it creates event listeners so as to 
+-respond to user actions on the site. i.e clicking, submitting, scrolling.
+
+## BackEnd
+
+Javascript has been used to fetch() data from the db.json file as well as POST form data
+
 
 ## Features
 - Enter new items.
